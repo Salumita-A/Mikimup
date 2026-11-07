@@ -16,12 +16,10 @@ public class DatabaseInitializer {
         try (Connection connection
                 = DriverManager.getConnection(url)) {
 
-            // Mengaktifkan foreign key
             try (Statement statement = connection.createStatement()) {
 
                 statement.execute("PRAGMA foreign_keys = ON");
 
-                // Tabel produk
                 statement.execute("""
                     CREATE TABLE IF NOT EXISTS products (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -43,7 +41,6 @@ public class DatabaseInitializer {
                     )
                 """);
 
-                // Tabel detail transaksi
                 statement.execute("""
                     CREATE TABLE IF NOT EXISTS transaction_details (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -60,7 +57,6 @@ public class DatabaseInitializer {
                     )
                 """);
 
-                // Tabel pembayaran
                 statement.execute("""
                     CREATE TABLE IF NOT EXISTS payments (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
