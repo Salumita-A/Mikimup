@@ -51,7 +51,7 @@ public class TransactionDetail {
         return productName;
     }
 
-    public int getQuatity() {
+    public int getQuantity() {
         return quantity;
     }
 
