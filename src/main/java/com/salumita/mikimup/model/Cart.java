@@ -14,7 +14,6 @@ public class Cart {
 
     private final Map<Integer, Item> items = new LinkedHashMap<>();
 
-    // Method asli Anda
     public void add(Product product, int quantity) {
         if (quantity <= 0) {
             throw new IllegalArgumentException("Jumlah harus positif");
@@ -26,7 +25,6 @@ public class Cart {
         );
     }
 
-    // TAMBAHKAN INI: Agar cocok dengan pemanggilan di MainFrame.java (cart.addProduct(product))
     public void addProduct(Product product) {
         add(product, 1); // Default menambah quantity 1 setiap kali tombol diklik
     }
@@ -49,7 +47,6 @@ public class Cart {
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
-    // TAMBAHKAN INI: Alias untuk total() agar cocok jika ada yang memanggil getTotal()
     public BigDecimal getTotal() {
         return total();
     }

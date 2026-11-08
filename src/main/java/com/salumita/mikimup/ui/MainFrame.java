@@ -53,7 +53,6 @@ public class MainFrame extends JFrame {
     }
 
     private void buildUI() {
-
         setLayout(new BorderLayout(12, 12));
 
         JLabel heading = new JLabel(

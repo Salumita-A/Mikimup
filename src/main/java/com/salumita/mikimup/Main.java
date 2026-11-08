@@ -1,4 +1,4 @@
-package com.salumita.mikimup.app;
+package com.salumita.mikimup;
 
 import com.salumita.mikimup.database.DatabaseInitializer;
 import com.salumita.mikimup.repository.ProductRepository;
